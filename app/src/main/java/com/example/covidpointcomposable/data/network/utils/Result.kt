@@ -1,4 +1,4 @@
-package com.iwgroup.covidpoint.data.network.utils
+package com.example.covidpointcomposable.data.network.utils
 
 sealed class Result<out T> {
     data class Success<out R>(val data: R) : Result<R>()

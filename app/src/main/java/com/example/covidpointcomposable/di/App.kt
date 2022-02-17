@@ -1,10 +1,8 @@
-package com.iwgroup.covidpoint.di
+package com.example.covidpointcomposable.di
 
 import android.app.Application
-import com.iwgroup.covidpoint.data.network.utils.ApiKeys
-import com.iwgroup.covidpoint.di.components.AppComponent
-import com.iwgroup.covidpoint.di.components.DaggerAppComponent
-import com.iwgroup.covidpoint.di.modules.AppModule
+import com.example.covidpointcomposable.data.network.utils.ApiKeys
+import com.example.covidpointcomposable.di.modules.AppModule
 import com.yandex.mapkit.MapKitFactory
 
 class App : Application() {

@@ -1,9 +1,9 @@
-package com.iwgroup.covidpoint.data.database.countries
+package com.example.covidpointcomposable.data.database.countries
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.iwgroup.covidpoint.data.database.typeconverters.CountryStatsConverter
+import com.example.covidpointcomposable.data.database.typeconverters.CountryStatsConverter
 
 @Database(entities = [CountryEntity::class], version = 1, exportSchema = false)
 @TypeConverters(CountryStatsConverter::class)

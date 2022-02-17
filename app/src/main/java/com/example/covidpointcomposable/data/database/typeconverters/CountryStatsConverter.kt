@@ -1,10 +1,10 @@
-package com.iwgroup.covidpoint.data.database.typeconverters
+package com.example.covidpointcomposable.data.database.typeconverters
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import java.lang.reflect.Type
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 @ProvidedTypeConverter
 object CountryStatsConverter {
@@ -13,8 +13,7 @@ object CountryStatsConverter {
         return if(value.isNullOrEmpty())
             null
         else {
-            val mapType: Type = object: TypeToken<Map<String, Int>>(){}.type
-            Gson().fromJson(value, mapType)
+            Json.decodeFromString<Map<String, Int>>(value)
         }
     }
 
@@ -23,6 +22,6 @@ object CountryStatsConverter {
         return if(map.isNullOrEmpty())
             null
         else
-            Gson().toJson(map)
+            Json.encodeToString(map)
     }
 }

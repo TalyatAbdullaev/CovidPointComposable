@@ -1,7 +1,7 @@
-package com.iwgroup.covidpoint.data.network.utils
+package com.example.covidpointcomposable.data.network.utilss
 
 import android.content.Context
-import com.iwgroup.covidpoint.R
+import com.example.covidpointcomposable.R
 import retrofit2.HttpException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException

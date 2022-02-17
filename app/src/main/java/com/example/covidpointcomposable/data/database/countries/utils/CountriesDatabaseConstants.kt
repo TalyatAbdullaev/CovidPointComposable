@@ -1,4 +1,4 @@
-package com.iwgroup.covidpoint.data.database.countries
+package com.example.covidpointcomposable.data.database.countries.utils
 
 object CountriesDatabaseConstants {
     const val COUNTRIES_TABLE_NAME = "countries"

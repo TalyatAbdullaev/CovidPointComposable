@@ -1,4 +1,4 @@
-package com.iwgroup.covidpoint.data.network.utils
+package com.example.covidpointcomposable.data.network.utils
 
 object Urls {
     const val BASE_URL = "https://coronavirus-tracker-api.herokuapp.com/"

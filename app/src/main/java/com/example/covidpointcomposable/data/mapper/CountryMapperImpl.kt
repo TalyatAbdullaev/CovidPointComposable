@@ -1,7 +1,7 @@
-package com.iwgroup.covidpoint.data.mapper
+package com.example.covidpointcomposable.data.mapper
 
-import com.iwgroup.covidpoint.data.database.countries.CountryEntity
-import com.iwgroup.covidpoint.data.pojo.Country
+import com.example.covidpointcomposable.data.database.countries.CountryEntity
+import com.example.covidpointcomposable.data.pojo.Country
 
 class CountryMapperImpl : CountryMapper<Country, CountryEntity> {
 

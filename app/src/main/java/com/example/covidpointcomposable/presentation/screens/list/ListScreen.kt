@@ -1,7 +1,6 @@
 package com.example.covidpointcomposable.presentation.screens.list
 
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
@@ -9,8 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import com.example.covidpointcomposable.data.database.countries.CountryEntity
+import com.example.covidpointcomposable.presentation.screens.list.extensions.urlByCountryCode
 import com.example.covidpointcomposable.presentation.screens.utils.CountryItem
-import com.iwgroup.covidpoint.data.database.countries.CountryEntity
 
 @Composable
 fun ListScreen(viewModel: ListViewModel) {
@@ -38,3 +38,6 @@ fun ListScreen(viewModel: ListViewModel) {
         }
     }
 }
+
+private fun calculateProgress(value: Int, sum: Int): Float =
+    value.toFloat() / sum.toFloat() * 100

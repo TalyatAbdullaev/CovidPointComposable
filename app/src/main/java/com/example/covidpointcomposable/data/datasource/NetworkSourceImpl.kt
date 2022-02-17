@@ -1,10 +1,9 @@
-package com.iwgroup.covidpoint.data.datasource
+package com.example.covidpointcomposable.data.datasource
 
-import com.iwgroup.covidpoint.data.datasource.interfaces.NetworkSource
-import com.iwgroup.covidpoint.data.network.services.CountryApiService
-import com.iwgroup.covidpoint.data.network.utils.Result
-import com.iwgroup.covidpoint.data.pojo.CountriesResponse
-import com.iwgroup.covidpoint.data.pojo.CountryResponse
+import com.example.covidpointcomposable.data.datasource.interfaces.NetworkSource
+import com.example.covidpointcomposable.data.network.services.CountryApiService
+import com.example.covidpointcomposable.data.pojo.CountriesResponse
+import com.example.covidpointcomposable.data.pojo.CountryResponse
 import javax.inject.Inject
 
 class NetworkSourceImpl @Inject constructor(private val countryApiService: CountryApiService) :
@@ -13,9 +12,9 @@ class NetworkSourceImpl @Inject constructor(private val countryApiService: Count
     private suspend fun <T> requestHandler(request: suspend () -> T): Result<T> {
         return try {
             val result = request()
-            Result.Success(result)
+            Result.success(result)
         } catch (e: Throwable) {
-            Result.Error(e)
+            Result.failure(e)
         }
     }
 

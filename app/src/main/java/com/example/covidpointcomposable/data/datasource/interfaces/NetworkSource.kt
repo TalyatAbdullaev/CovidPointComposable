@@ -1,8 +1,9 @@
-package com.iwgroup.covidpoint.data.datasource.interfaces
+package com.example.covidpointcomposable.data.datasource.interfaces
 
-import com.iwgroup.covidpoint.data.network.utils.Result
-import com.iwgroup.covidpoint.data.pojo.CountryResponse
-import com.iwgroup.covidpoint.data.pojo.CountriesResponse
+import com.example.covidpointcomposable.data.network.utils.Result
+import com.example.covidpointcomposable.data.pojo.CountriesResponse
+import com.example.covidpointcomposable.data.pojo.CountryResponse
+
 
 interface NetworkSource {
 

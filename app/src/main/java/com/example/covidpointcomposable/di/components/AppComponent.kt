@@ -1,28 +1,15 @@
-package com.iwgroup.covidpoint.di.components
+package com.example.covidpointcomposable.di
 
-import com.iwgroup.covidpoint.di.modules.*
-import com.iwgroup.covidpoint.presentation.MainActivity
-import com.iwgroup.covidpoint.presentation.fragments.container.ContainerFragment
-import com.iwgroup.covidpoint.presentation.fragments.container.listcountries.ListCountriesFragment
-import com.iwgroup.covidpoint.presentation.fragments.container.mapcountries.MapCountriesFragment
-import com.iwgroup.covidpoint.presentation.fragments.splash.SplashFragment
+import com.example.covidpointcomposable.MainActivity
+import com.example.covidpointcomposable.di.modules.AppModule
+import com.example.covidpointcomposable.di.modules.DatabaseModule
+import com.example.covidpointcomposable.di.modules.NetworkModule
+import com.example.covidpointcomposable.di.modules.RepositoriesModule
 import dagger.Component
 
 @Component(
-    modules = arrayOf(
-        AppModule::class,
-        DatabaseModule::class,
-        NetworkModule::class,
-        RepositoriesModule::class
-    )
+    modules = [AppModule::class, DatabaseModule::class, NetworkModule::class, RepositoriesModule::class]
 )
 interface AppComponent {
-    //Activities
     fun inject(activity: MainActivity)
-
-    //Fragments
-    fun inject(containerFragment: ContainerFragment)
-    fun inject(splashFragment: SplashFragment)
-    fun inject(listCountriesFragment: ListCountriesFragment)
-    fun inject(mapCountriesFragment: MapCountriesFragment)
 }

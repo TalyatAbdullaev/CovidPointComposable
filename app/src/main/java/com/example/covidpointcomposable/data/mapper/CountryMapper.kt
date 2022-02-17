@@ -1,4 +1,4 @@
-package com.iwgroup.covidpoint.data.mapper
+package com.example.covidpointcomposable.data.mapper
 
 interface CountryMapper<E, D> {
 

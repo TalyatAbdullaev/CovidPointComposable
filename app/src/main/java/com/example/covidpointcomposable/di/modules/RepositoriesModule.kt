@@ -1,13 +1,13 @@
-package com.iwgroup.covidpoint.di.modules
+package com.example.covidpointcomposable.di.modules
 
-import com.iwgroup.covidpoint.data.database.countries.CountriesDao
-import com.iwgroup.covidpoint.data.network.services.CountryApiService
-import com.iwgroup.covidpoint.data.datasource.DatabaseSourceImpl
-import com.iwgroup.covidpoint.data.repositories.MainRepositoryImpl
-import com.iwgroup.covidpoint.data.datasource.NetworkSourceImpl
-import com.iwgroup.covidpoint.data.datasource.interfaces.DatabaseSource
-import com.iwgroup.covidpoint.data.repositories.interfaces.MainRepository
-import com.iwgroup.covidpoint.data.datasource.interfaces.NetworkSource
+import com.example.covidpointcomposable.data.database.countries.CountriesDao
+import com.example.covidpointcomposable.data.datasource.DatabaseSourceImpl
+import com.example.covidpointcomposable.data.datasource.NetworkSourceImpl
+import com.example.covidpointcomposable.data.datasource.interfaces.DatabaseSource
+import com.example.covidpointcomposable.data.datasource.interfaces.NetworkSource
+import com.example.covidpointcomposable.data.network.services.CountryApiService
+import com.example.covidpointcomposable.data.repositories.CountriesRepositoryImpl
+import com.example.covidpointcomposable.data.repositories.interfaces.CountriesRepository
 import dagger.Module
 import dagger.Provides
 
@@ -26,6 +26,6 @@ class RepositoriesModule {
     fun provideMainRepository(
         networkSource: NetworkSource,
         databaseSource: DatabaseSource
-    ): MainRepository =
-        MainRepositoryImpl(networkSource, databaseSource)
+    ): CountriesRepository =
+        CountriesRepositoryImpl(networkSource, databaseSource)
 }

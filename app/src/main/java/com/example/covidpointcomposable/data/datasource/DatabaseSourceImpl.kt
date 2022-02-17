@@ -1,8 +1,8 @@
-package com.iwgroup.covidpoint.data.datasource
+package com.example.covidpointcomposable.data.datasource
 
-import com.iwgroup.covidpoint.data.database.countries.CountriesDao
-import com.iwgroup.covidpoint.data.database.countries.CountryEntity
-import com.iwgroup.covidpoint.data.datasource.interfaces.DatabaseSource
+import com.example.covidpointcomposable.data.database.countries.CountriesDao
+import com.example.covidpointcomposable.data.database.countries.CountryEntity
+import com.example.covidpointcomposable.data.datasource.interfaces.DatabaseSource
 import javax.inject.Inject
 
 class DatabaseSourceImpl @Inject constructor(private val dao: CountriesDao) :

@@ -1,6 +1,10 @@
-package com.iwgroup.covidpoint.data.database.countries
+package com.example.covidpointcomposable.data.database.countries
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.example.covidpointcomposable.data.database.countries.utils.CountriesDatabaseConstants
 
 @Dao
 interface CountriesDao {

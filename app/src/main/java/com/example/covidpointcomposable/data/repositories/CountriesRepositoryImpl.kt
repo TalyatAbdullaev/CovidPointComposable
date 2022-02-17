@@ -1,18 +1,18 @@
-package com.iwgroup.covidpoint.data.repositories
+package com.example.covidpointcomposable.data.repositories
 
-import com.iwgroup.covidpoint.data.database.countries.CountryEntity
-import com.iwgroup.covidpoint.data.network.utils.Result
-import com.iwgroup.covidpoint.data.pojo.CountryResponse
-import com.iwgroup.covidpoint.data.pojo.CountriesResponse
-import com.iwgroup.covidpoint.data.datasource.interfaces.DatabaseSource
-import com.iwgroup.covidpoint.data.repositories.interfaces.MainRepository
-import com.iwgroup.covidpoint.data.datasource.interfaces.NetworkSource
+import com.example.covidpointcomposable.data.database.countries.CountryEntity
+import com.example.covidpointcomposable.data.datasource.interfaces.DatabaseSource
+import com.example.covidpointcomposable.data.datasource.interfaces.NetworkSource
+import com.example.covidpointcomposable.data.network.utils.Result
+import com.example.covidpointcomposable.data.pojo.CountriesResponse
+import com.example.covidpointcomposable.data.pojo.CountryResponse
+import com.example.covidpointcomposable.data.repositories.interfaces.CountriesRepository
 import javax.inject.Inject
 
-class MainRepositoryImpl @Inject constructor(
+class CountriesRepositoryImpl @Inject constructor(
     private val networkSource: NetworkSource,
     private val databaseSource: DatabaseSource
-) : MainRepository {
+) : CountriesRepository {
 
     override suspend fun getDataFromDB(): List<CountryEntity> =
         databaseSource.getCountries()

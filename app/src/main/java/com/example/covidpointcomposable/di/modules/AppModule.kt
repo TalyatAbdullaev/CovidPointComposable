@@ -1,8 +1,8 @@
-package com.iwgroup.covidpoint.di.modules
+package com.example.covidpointcomposable.di.modules
 
-import dagger.Module
 import android.content.Context
-import com.iwgroup.covidpoint.di.App
+import com.example.covidpointcomposable.di.App
+import dagger.Module
 import dagger.Provides
 
 @Module

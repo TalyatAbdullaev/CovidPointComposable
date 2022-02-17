@@ -1,14 +1,14 @@
-package com.iwgroup.covidpoint.di.modules
+package com.example.covidpointcomposable.di.modules
 
 import androidx.room.Room
-import com.iwgroup.covidpoint.data.database.countries.CountriesDao
-import com.iwgroup.covidpoint.data.database.countries.CountriesDatabase
-import com.iwgroup.covidpoint.data.database.countries.CountryEntity
-import com.iwgroup.covidpoint.data.database.countries.CountriesDatabaseConstants
-import com.iwgroup.covidpoint.data.mapper.CountryMapper
-import com.iwgroup.covidpoint.data.mapper.CountryMapperImpl
-import com.iwgroup.covidpoint.data.pojo.Country
-import com.iwgroup.covidpoint.di.App
+import com.example.covidpointcomposable.data.database.countries.CountriesDao
+import com.example.covidpointcomposable.data.database.countries.CountriesDatabase
+import com.example.covidpointcomposable.data.database.countries.CountryEntity
+import com.example.covidpointcomposable.data.database.countries.utils.CountriesDatabaseConstants
+import com.example.covidpointcomposable.data.mapper.CountryMapper
+import com.example.covidpointcomposable.data.mapper.CountryMapperImpl
+import com.example.covidpointcomposable.data.pojo.Country
+import com.example.covidpointcomposable.di.App
 import dagger.Module
 import dagger.Provides
 

@@ -1,7 +1,8 @@
-package com.iwgroup.covidpoint.data.database.countries
+package com.example.covidpointcomposable.data.database.countries
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.covidpointcomposable.data.database.countries.utils.CountriesDatabaseConstants
 
 @Entity(tableName = CountriesDatabaseConstants.COUNTRIES_TABLE_NAME)
 data class CountryEntity(

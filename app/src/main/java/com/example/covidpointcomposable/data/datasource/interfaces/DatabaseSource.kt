@@ -1,6 +1,6 @@
-package com.iwgroup.covidpoint.data.datasource.interfaces
+package com.example.covidpointcomposable.data.datasource.interfaces
 
-import com.iwgroup.covidpoint.data.database.countries.CountryEntity
+import com.example.covidpointcomposable.data.database.countries.CountryEntity
 
 interface DatabaseSource {
 

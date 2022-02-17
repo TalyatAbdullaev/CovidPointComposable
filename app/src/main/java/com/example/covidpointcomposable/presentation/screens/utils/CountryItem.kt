@@ -82,7 +82,7 @@ private fun DateContainer(startDate: String, endDate: String) {
 }
 
 private enum class Stats(id: Int) {
-    CONFIRMED(R.string.confirmed_label),
-    DEATHS(R.string.deaths_label),
-    RECOVERED(R.string.recovered_label)
+    CONFIRMED(R.string.label_confirmed),
+    DEATHS(R.string.label_deaths),
+    RECOVERED(R.string.label_recovered)
 }

@@ -1,14 +1,16 @@
-package com.iwgroup.covidpoint.di.modules
+package com.example.covidpointcomposable.di.modules
 
 import android.content.Context
-import com.iwgroup.covidpoint.data.network.services.CountryApiService
-import com.iwgroup.covidpoint.data.network.utils.ExceptionHandler
-import com.iwgroup.covidpoint.data.network.utils.Urls
+import com.example.covidpointcomposable.data.network.services.CountryApiService
+import com.example.covidpointcomposable.data.network.utils.Urls
+import com.example.covidpointcomposable.data.network.utilss.ExceptionHandler
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
 class NetworkModule {
@@ -19,8 +21,10 @@ class NetworkModule {
 
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+        val contentType = MediaType.get("application/json")
+
         return Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(Json.asConverterFactory(contentType))
             .baseUrl(Urls.BASE_URL)
             .client(okHttpClient)
             .build()
@@ -31,6 +35,6 @@ class NetworkModule {
         retrofit.create(CountryApiService::class.java)
 
     @Provides
-    fun provideRequestHandler(context: Context): ExceptionHandler =
+    fun provideExceptionHandler(context: Context): ExceptionHandler =
         ExceptionHandler(context)
 }

@@ -1,11 +1,15 @@
 package com.example.covidpointcomposable.di.modules
 
 import com.example.covidpointcomposable.data.database.countries.CountriesDao
+import com.example.covidpointcomposable.data.database.countries.CountryEntity
 import com.example.covidpointcomposable.data.datasource.DatabaseSourceImpl
 import com.example.covidpointcomposable.data.datasource.NetworkSourceImpl
 import com.example.covidpointcomposable.data.datasource.interfaces.DatabaseSource
 import com.example.covidpointcomposable.data.datasource.interfaces.NetworkSource
+import com.example.covidpointcomposable.data.mapper.CountryMapper
+import com.example.covidpointcomposable.data.mapper.CountryMapperImpl
 import com.example.covidpointcomposable.data.network.services.CountryApiService
+import com.example.covidpointcomposable.data.pojo.Country
 import com.example.covidpointcomposable.data.repositories.CountriesRepositoryImpl
 import com.example.covidpointcomposable.data.repositories.interfaces.CountriesRepository
 import dagger.Module

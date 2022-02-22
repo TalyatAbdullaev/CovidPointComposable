@@ -15,7 +15,7 @@ class CountryMapperImpl : CountryMapper<Country, CountryEntity> {
             type.id,
             type.country,
             type.countryCode,
-            type.countryPopulation,
+            type.countryPopulation?: 0,
             type.province,
             type.coordinates.latitude.toDouble(),
             type.coordinates.longitude.toDouble(),

@@ -1,4 +1,4 @@
-package com.example.covidpointcomposable.presentation.screens.list
+package com.example.covidpointcomposable.presentation.screens.map
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,8 +9,7 @@ import com.example.covidpointcomposable.data.repositories.interfaces.CountriesRe
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class ListViewModel @Inject constructor(private val repository: CountriesRepository): ViewModel() {
-
+class MapViewModel @Inject constructor(private val repository: CountriesRepository): ViewModel() {
     private val _countries = MutableLiveData<List<CountryEntity>>()
     val countries: LiveData<List<CountryEntity>> = _countries
 

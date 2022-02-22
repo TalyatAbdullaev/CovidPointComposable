@@ -15,7 +15,7 @@ data class Country(
     val countryCode: String,
 
     @SerialName("country_population")
-    val countryPopulation: Int,
+    val countryPopulation: Int?,
 
     @SerialName("province")
     val province: String,
@@ -27,5 +27,5 @@ data class Country(
     val latest: Statistic,
 
     @SerialName("timelines")
-    val timelines: Timelines?
+    val timelines: Timelines? = null
 )

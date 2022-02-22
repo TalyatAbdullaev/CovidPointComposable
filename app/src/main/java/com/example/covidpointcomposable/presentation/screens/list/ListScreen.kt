@@ -1,13 +1,15 @@
 package com.example.covidpointcomposable.presentation.screens.list
 
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.example.covidpointcomposable.data.database.countries.CountryEntity
 import com.example.covidpointcomposable.presentation.screens.list.extensions.urlByCountryCode
 import com.example.covidpointcomposable.presentation.screens.utils.CountryItem
@@ -17,9 +19,19 @@ fun ListScreen(viewModel: ListViewModel) {
 
     val countries: List<CountryEntity> by viewModel.countries.observeAsState(listOf())
 
-    LazyColumn(modifier = Modifier.fillMaxSize()) {
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 10.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
         items(countries) { country ->
-            Card {
+            Card(
+                shape = RoundedCornerShape(20.dp),
+                elevation = 4.dp,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight()
+            ) {
                 val sum = country.confirmed + country.deaths + country.recovered
 
                 CountryItem(

@@ -88,4 +88,7 @@ dependencies {
 
     //GlideImage
     implementation "com.github.skydoves:landscapist-glide:1.4.8"
+
+    //ViewPager
+    implementation "com.google.accompanist:accompanist-pager:0.12.0"
 }

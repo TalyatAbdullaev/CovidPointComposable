@@ -22,16 +22,19 @@ class NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         val contentType = MediaType.get("application/json")
+        val converterFactory = Json {
+            ignoreUnknownKeys = true
+        }.asConverterFactory(contentType)
 
         return Retrofit.Builder()
-            .addConverterFactory(Json.asConverterFactory(contentType))
+            .addConverterFactory(converterFactory)
             .baseUrl(Urls.BASE_URL)
             .client(okHttpClient)
             .build()
     }
 
     @Provides
-    fun provideApiService (retrofit: Retrofit): CountryApiService =
+    fun provideApiService(retrofit: Retrofit): CountryApiService =
         retrofit.create(CountryApiService::class.java)
 
     @Provides

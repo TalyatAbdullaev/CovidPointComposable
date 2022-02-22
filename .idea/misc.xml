@@ -4,6 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/background_splash.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/confirmed_progress_bar_color.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/deaths_progress_bar_color.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/ic_default_menu.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/ic_list.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/ic_map.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/ic_search.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/menu_item_background.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/recovered_progress_bar_color.xml" value="0.173" />
+        <entry key="..\:/Users/User/StudioProjects/CovidPointComposable/app/src/main/res/drawable/tab_unselected_background.xml" value="0.173" />
       </map>
     </option>
   </component>

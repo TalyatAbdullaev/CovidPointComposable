@@ -5,6 +5,7 @@ import com.example.covidpointcomposable.data.network.services.CountryApiService
 import com.example.covidpointcomposable.data.pojo.CountriesResponse
 import com.example.covidpointcomposable.data.pojo.CountryResponse
 import javax.inject.Inject
+import com.example.covidpointcomposable.data.network.utils.Result
 
 class NetworkSourceImpl @Inject constructor(private val countryApiService: CountryApiService) :
     NetworkSource {
@@ -12,9 +13,9 @@ class NetworkSourceImpl @Inject constructor(private val countryApiService: Count
     private suspend fun <T> requestHandler(request: suspend () -> T): Result<T> {
         return try {
             val result = request()
-            Result.success(result)
+            Result.Success(result)
         } catch (e: Throwable) {
-            Result.failure(e)
+            Result.Error(e)
         }
     }
 
